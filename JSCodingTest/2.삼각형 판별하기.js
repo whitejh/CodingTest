@@ -14,4 +14,5 @@ function solution(a, b, c) {
   return answer;
 }
 
-console.log(solution(13, 33, 17));
+console.log(solution(6, 7, 11)); //YES
+console.log(solution(13, 33, 17)); //NO
