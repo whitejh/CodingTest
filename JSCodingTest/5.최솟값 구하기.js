@@ -17,3 +17,15 @@ console.log(solution(arr));
 /*
 Number.MAX_SAFE_INTEGER 상수는 js에서 안전한 최대 정수값을 나타낸다
 */
+
+// 내장 함수 사용 (최솟값)
+function solution2(arr) {
+  let answer = Math.min(...arr); // 배열을 넘길 때 ... 연산자 사용
+  //let answer = Math.min.apply(null, arr);
+  return answer;
+}
+
+let arr2 = [5, 3, 7, 11, 2, 15, 17];
+console.log(solution2(arr2));
+
+/* Math.min(), Math.max() 최소 최대 구하는 내장함수 */
