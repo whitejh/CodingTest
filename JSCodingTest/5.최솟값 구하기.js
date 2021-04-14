@@ -4,7 +4,7 @@ function solution(arr) {
   let answer,
     min = Number.MAX_SAFE_INTEGER;
 
-  for (let i = 1; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] < min) min = arr[i];
   }
   answer = min;
@@ -12,7 +12,8 @@ function solution(arr) {
 }
 
 let arr = [5, 3, 7, 11, 2, 15, 17];
-console.log(solution(arr));
+const result = solution(arr);
+console.log(result);
 
 /*
 Number.MAX_SAFE_INTEGER 상수는 js에서 안전한 최대 정수값을 나타낸다
@@ -26,6 +27,7 @@ function solution2(arr) {
 }
 
 let arr2 = [5, 3, 7, 11, 2, 15, 17];
-console.log(solution2(arr2));
+const result2 = solution2(arr2);
+console.log(result2);
 
 /* Math.min(), Math.max() 최소 최대 구하는 내장함수 */
