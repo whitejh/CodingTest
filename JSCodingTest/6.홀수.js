@@ -1,13 +1,24 @@
 function solution(arr) {
-  let answer = [];
+  let answer = []; // 빈 배열 선언
   let sum = 0,
-    min = 1000;
-  for (let x of arr) {
-    if (x % 2 === 1) {
-      sum += x;
-      if (x < min) min = x;
+    min = Number.MAX_SAFE_INTEGER; // 아주 큰 값을 이렇게 선언
+  for (let num of arr) {
+    if (num % 2 === 1) {
+      sum += num;
+      if (num < min) min = num;
     }
   }
+
+  // 2. foreach문 사용
+  // arr.forEach((num) => {
+  //   if (num % 2 !== 0) {
+  //     sum += num;
+  //     if (num < min) {
+  //       min = num;
+  //     }
+  //   }
+  // });
+
   answer.push(sum);
   answer.push(min);
   return answer;
