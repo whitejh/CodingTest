@@ -9,3 +9,12 @@ function solution(s) {
 
 let str = 'BANANA';
 console.log(solution(str));
+
+function solution2(s) {
+  let answer2 = s;
+  answer2 = answer2.replace(/A/g, '#');
+  return answer2;
+}
+
+let str2 = 'BANANA';
+console.log(solution2(str2));
