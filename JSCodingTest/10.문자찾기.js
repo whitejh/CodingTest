@@ -8,3 +8,11 @@ function solution(s,t) {
 
 let str="COMPUTERPROGRAMMING";
 console.log(solution(str,'R'));
+
+function solution2(s2,t2) {
+  let answer2=s2.split(t).length;
+  return answer-1;
+}
+
+let str="COMPUTERPROGRAMMING";
+console.log(solution(str,'R'));
