@@ -12,4 +12,4 @@ function solution(w, h) {
     answer = w * h - (w + h - gcd);
     return answer;
 }
-console.log(solution(8, 12));
+console.log(solution(8, 12)); // 96-16=80 출력
