@@ -1,4 +1,5 @@
-//중복문자제거할 때 indexOf() 활용
+//중복문자제거하고 문자열 출력
+
 function solution(s) {
   let answer="";
 
@@ -8,3 +9,18 @@ function solution(s) {
   return answer;
 }
 console.log(solution("ksekkset")); // kset 출력
+
+// 중복문자 개수 찾기
+
+function solution(s) {
+  let answer = 0;
+  let pos = s.indexOf('k');
+  while (pos !== -1) {
+    answer++;
+    pos = s.indexOf('k', pos + 1);
+  }
+  return answer;
+}
+console.log(solution("ksekkset")); // 3 출력 (k 문자개수 = 3)
+
+
