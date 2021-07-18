@@ -1,25 +1,37 @@
-function solution(nums)
-{
-  var answer = 0;
-  var array = [];
-  var len = nums.length;
-  for (let i = 0; i < len - 2; i++){
-    for (let j = i + 1; j < len - 1; j++){
-      for (let k = j + 1; k < len; k++){
-        array.push(nums[i] + nums[j] + nums[k]);
-      }
-    }
-  } //reduce함수 이용 
-  answer = array.reduce((acc, cur, idx) => acc + primeNumber(cur), 0)
+// 프로그래머스 Lv1
+// K번째 수
+
+// 1
+function solution(array, commands) {
+  var answer = [];
+  let i = 0;
+  let j = 0;
+  let k = 0;
+  for (let m = 0; m < commands.length; m++) {
+      i = commands[m][0]
+      j = commands[m][1]
+      k = commands[m][2]
+      
+      let sliced = array.slice(i-1, j)
+      let sorted = sliced.sort((a,b)=> a - b) // 오름차순 정렬
+  
+      answer.push(sorted[k-1])
+  }
   return answer;
 }
 
-//소수 판별 함수 
-function primeNumber(n) {
-  for (let i = 2; i <= Math.sqrt(n); i++) {
-    //소수가 아닐 경우 
-    if (n % i == 0) { return 0; }
-  } //소수일 경우 
-  return 1;
+console.log(solution([1,5,2,6,3,7,4],[[2,5,3],[4,4,1],[1,7,3]])); // [5,6,3]
+
+// 2
+function solution(array, commands) {
+    const answer = [];
+    commands.forEach(command => {
+        const tmp = array.slice(command[0] - 1, command[1]);
+        tmp.sort((a,b)=>a-b);
+        answer.push(tmp[command[2] - 1]);
+    });  
+    return answer;
+
 }
 
+console.log(solution([1,5,2,6,3,7,4],[[2,5,3],[4,4,1],[1,7,3]])); // [5,6,3]
