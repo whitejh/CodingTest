@@ -19,8 +19,9 @@ function solution(n) {
     }
     return answer;
 }
+console.log(solution(4));
 
 // 재귀함수 사용
-function solution(n) {
-    return n ? solution(parseInt((n - 1) / 3)) + [1, 2, 4][(n - 1) % 3] : '';
-}
+// function solution(n) {
+//     return n ? solution(parseInt((n - 1) / 3)) + [1, 2, 4][(n - 1) % 3] : '';
+// }
