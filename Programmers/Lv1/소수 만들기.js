@@ -1,3 +1,5 @@
+// 프로그래머스 Lv1
+// 소수 만들기
 function solution(nums) {
   let answer = 0;
   let n = nums.length;
