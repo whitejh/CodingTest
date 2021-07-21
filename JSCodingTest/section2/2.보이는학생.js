@@ -1,4 +1,6 @@
 // 1차원 배열 탐색 & 최댓값 활용
+
+// 1
 function solution(arr) {
     let answer = 0, max = arr[0];//max = Number.MIN_SAFE_INTEGER; 
 
@@ -15,13 +17,14 @@ function solution(arr) {
 const input = [130, 135, 148, 140, 145, 150, 150, 153];
 console.log(solution(input));
 
+//2
 function solution(arr) {
     let answer = 0, max = arr[0];//max = Number.MIN_SAFE_INTEGER; 
 
     for(let i = 1;i < arr.length;i++){
       if(arr[i] > max) {
         answer++;
-        max=arr[i];
+        max = arr[i];
         
       }
     }
