@@ -27,7 +27,7 @@ function solution(land) {
 // answer = [16,15,13,13]
 // https://onlydev.tistory.com/71
 
-// 2
+// 2. DP 동적계획법
 function solution(land) {
   let answer = 0;
 
@@ -46,3 +46,4 @@ function solution(land) {
 
   return answer;
 }
+// 다음 행으로 넘어갔을때 그 행의 열의 요소에다가 그 전행의 열의 인덱스를 뺸 배열에서 가장 큰 값을 더해주면 된다.
