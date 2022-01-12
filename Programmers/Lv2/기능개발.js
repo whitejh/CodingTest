@@ -28,3 +28,5 @@ function solution(progresses, speeds) {
 
   return answer;
 }
+console.log(solution([93, 30, 55]));
+console.log(solution([95, 90, 99, 99, 80, 99]));

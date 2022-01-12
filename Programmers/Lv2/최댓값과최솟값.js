@@ -24,7 +24,7 @@ function solution(s) {
 
 // 2
 function solution(s) {
-  const arr = s.split(' ');
+  const arr = s.split(' '); // 문자열의 공백 제거 후 배열에 저장, split 활용
 
   return Math.min(...arr) + ' ' + Math.max(...arr);
 }

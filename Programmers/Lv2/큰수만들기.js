@@ -13,13 +13,15 @@ function solution(number, k) {
       k--;
     }
 
-    stack.push(element);
+    stack.push(element); // [9,4]
   }
 
   stack.splice(stack.length - k, k); // pop이 k보다 적게 되었을 경우, splice를 통해 남은 k만큼 지워줌
   answer = stack.join(''); // 가장 큰 숫자를 문자열 형태로 return 
-  return answer
+  return answer;
 }
+
+
 
 // join('') : 배열의 모든 요소를 연결해 하나의 문자열로 만듦
 
@@ -28,4 +30,4 @@ function solution(number, k) {
 
 // 제거할 숫자를 다 채웠으면 그냥 넣음
 // k가 0일 경우, 스택은 그대로
-// 하지만 k가 남아있으면, 뒤에서부터 제거 (예 : 1010, 2 -> 11)
+// 하지만 k가 남아있으면, 뒤에서부터 제거

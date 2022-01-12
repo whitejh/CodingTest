@@ -14,8 +14,7 @@ function solution(priorities, location) {
   }
   // priorites가 전부 비워질 때까지 실행
   while (priorities.length > 0) {
-    // priorites와 checkArray 첫 요소를 가져오기
-    const firstPriority = priorities.shift();
+    const firstPriority = priorities.shift(); // priorites와 checkArray 첫 요소를 가져오기
     const firstCheck = checkArray.shift();
     let check = true; // 해당 요소보다 큰 요소가 있는지 없는지를 판별할 변수
 
@@ -32,7 +31,7 @@ function solution(priorities, location) {
       answer += 1;
       // 목표로 한 문서인 경우 중단
       if (firstCheck) {
-        break
+        break;
       }
     }
   }
@@ -52,3 +51,26 @@ function solution(priorities, location) {
 
 // 만약, 큰 요소가 없는 경우 check가 true이므로 if문을 통해서 몇 번째 문서인지 기록하고
 // 가져온 checkArray의 첫 요소가 true이면 break로 완료 처리한다.
+
+// 2
+function solution(priorities, location) {
+  var arr = priorities.map((priority, index) => {
+    return {
+      index: index, priority: priority
+    };
+  });
+
+  var queue = [];
+
+  while (arr.length > 0) {
+    var firstEle = arr.shift();
+    var hasHighPriority = arr.some(ele => ele.priority > firstEle.priority);
+    if (hasHighPriority) {
+      arr.push(firstEle);
+    } else {
+      queue.push(firstEle);
+    }
+  }
+
+  return queue.findIndex(queueEle => queueEle.index === location) + 1;
+}
